@@ -1,3 +1,11 @@
+type Approval @entity {
+  id: ID! # Transaction hash
+  value: BigInt!
+  owner: String!
+  spender: String!
+  contractAddress: String!
+}
+
 type Account @entity {
   id: ID! # address
   transferCount: Int
