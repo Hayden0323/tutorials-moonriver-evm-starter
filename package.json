@@ -5,10 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc -b",
-    "prepack": "rm -rf dist && yarn build",
+    "prepack": "rm -rf dist && npm build",
     "test": "jest",
-    "codegen": "./node_modules/.bin/subql codegen",
-    "docker": "docker-compose pull && docker-compose up"
+    "codegen": "./node_modules/.bin/subql codegen"
   },
   "homepage": "https://github.com/subquery/tutorials-moonriver-evm-starter",
   "repository": "github:subquery/tutorials-moonriver-evm-starter",
@@ -17,7 +16,7 @@
     "schema.graphql",
     "project.yaml"
   ],
-  "author": "Hayden0323",
+  "author": "Ian He & Jay Ji",
   "license": "Apache-2.0",
   "devDependencies": {
     "@polkadot/api": "^6.6.1",
