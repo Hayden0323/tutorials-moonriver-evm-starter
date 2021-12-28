@@ -21,6 +21,8 @@ export async function createTransfer(from: string, to: string, tokenAddress: str
 
   logger.info([txHash, idx, tokenAddress, from, to, amount.toString(), block, timestamp.getTime()].join('-'))
 
+  return
+
   transfer.fromId = fromAccount.id
   transfer.toId = toAccount.id
   transfer.amount = amount
