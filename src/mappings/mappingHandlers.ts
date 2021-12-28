@@ -1,25 +1,25 @@
 import { MoonbeamCall, MoonbeamEvent } from '@subql/contract-processors/dist/moonbeam'
 import { Approval, Transaction } from '../types'
-import { ApproveCallArgs, TransferEventArgs } from '../utils/createTransferRecord'
+import { ApproveCallArgs, createTransfer, TransferEventArgs } from '../utils/createTransferRecord'
 
 export async function handleMoonriverEvent(event: MoonbeamEvent<TransferEventArgs>): Promise<void> {
-  const transaction = new Transaction(event.transactionHash);
+  // const transaction = new Transaction(event.transactionHash);
 
-    transaction.value = event.args.value.toBigInt();
-    transaction.from = event.args.from;
-    transaction.to = event.args.to;
-    transaction.contractAddress = event.address;
+  //   transaction.value = event.args.value.toBigInt();
+  //   transaction.from = event.args.from;
+  //   transaction.to = event.args.to;
+  //   transaction.contractAddress = event.address;
 
-    await transaction.save();
+  //   await transaction.save();
     
-  // const from = event.args.from
-  // const to = event.args.to
-  // const amount = event.args.value.toBigInt()
-  // const tokenAddress = event.address
+  const from = event.args.from
+  const to = event.args.to
+  const amount = event.args.value.toBigInt()
+  const tokenAddress = event.address
 
-  logger.info(event.address)
+  // logger.info(event.address)
 
-  // await createTransfer(from, to, tokenAddress, amount, event)
+  await createTransfer(from, to, tokenAddress, amount, event)
 }
 
 export async function handleMoonriverCall(event: MoonbeamCall<ApproveCallArgs>): Promise<void> {
