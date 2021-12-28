@@ -19,9 +19,7 @@ export async function createTransfer(from: string, to: string, tokenAddress: str
 
   const dateEndOfDay = getDateEndOfDay(timestamp).toDate()
 
-  logger.info([txHash, idx, tokenAddress, from, to, amount.toString(), block, timestamp.getTime()].join('-'))
-
-  return
+  // logger.info([txHash, idx, tokenAddress, from, to, amount.toString(), block, dateEndOfDay.getTime()].join('-'))
 
   transfer.fromId = fromAccount.id
   transfer.toId = toAccount.id
