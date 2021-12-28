@@ -1,6 +1,6 @@
 import { MoonbeamEvent } from '@subql/contract-processors/dist/moonbeam'
 import { BigNumber } from 'ethers'
-import { getAccount, getToken, getTokenDailyReport, getTransfer, getUserDailyReport, getUserDailyReportGroup } from './record'
+// import { getAccount, getToken, getTokenDailyReport, getTransfer, getUserDailyReport, getUserDailyReportGroup } from './record'
 
 // Setup types from ABI
 export type TransferEventArgs = [string, string, BigNumber] & { from: string; to: string; value: BigNumber }
