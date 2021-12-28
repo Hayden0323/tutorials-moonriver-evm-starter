@@ -7,5 +7,7 @@ export async function handleMoonriverEvent(event: MoonbeamEvent<TransferEventArg
   const amount = event.args.value.toBigInt()
   const tokenAddress = event.address
 
-  await createTransfer(from, to, tokenAddress, amount, event)
+  logger.info(tokenAddress)
+
+  // await createTransfer(from, to, tokenAddress, amount, event)
 }
