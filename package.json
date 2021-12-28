@@ -8,9 +8,7 @@
     "prepack": "rm -rf dist && yarn build",
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen",
-    "docker": "docker-compose pull && docker-compose up",
-    "lint": "npx eslint . --ext .ts",
-    "prettier": "npx prettier --write ."
+    "docker": "docker-compose pull && docker-compose up"
   },
   "homepage": "https://github.com/subquery/tutorials-moonriver-evm-starter",
   "repository": "github:subquery/tutorials-moonriver-evm-starter",
@@ -29,14 +27,7 @@
   "dependencies": {
     "@subql/contract-processors": "^0.3.0",
     "@subql/types": "latest",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
-    "eslint": "^8.2.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
     "dayjs": "^1.10.7",
-    "ethers": "^5.5.0",
-    "prettier": "^2.4.1"
+    "ethers": "^5.5.0"
   }
 }
