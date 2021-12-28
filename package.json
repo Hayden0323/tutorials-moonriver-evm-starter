@@ -27,7 +27,6 @@
   "dependencies": {
     "@subql/contract-processors": "^0.3.0",
     "@subql/types": "latest",
-    "dayjs": "^1.10.7",
     "ethers": "^5.5.0"
   }
 }
