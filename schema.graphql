@@ -1,7 +1,7 @@
 type Account @entity {
   id: ID! # address
-  transferCount: Int!
-  _transferCount: Int! # all transfer
+  transferCount: Int
+  _transferCount: Int # all transfer
   in: [Transfer] @derivedFrom(field: "to") # all transfer-in record
   out: [Transfer] @derivedFrom(field: "from") # all tranfser-out record
   daily: [UserDailyReportGroup] @derivedFrom(field: "account") # user daily transfer reports
@@ -9,15 +9,15 @@ type Account @entity {
 
 type Token @entity {
   id: ID! # contractAddress
-  transferCount: Int! # all user transfer count
-  _transferCount: Int! # all transfer count
+  transferCount: Int # all user transfer count
+  _transferCount: Int # all transfer count
   transfers: [Transfer] @derivedFrom(field: "token") # all transfers relate to `token`
   daily: [TokenDailyReport] @derivedFrom(field: "token") # the daily transfer reports
 }
 
 type Transfer @entity {
   id: ID!
-  amount: BigInt!
+  amount: BigInt
   token: Token!
   from: Account! # from account
   to: Account! # to account
@@ -28,8 +28,8 @@ type Transfer @entity {
 type UserDailyReportGroup @entity {
   id: ID! # `account`-`timstamp`
   account: Account!
-  transferCount: Int! # count user daily transfer tx relate to `token`
-  _transferCount: Int! # count user daily transfer tx relate to `token`
+  transferCount: Int # count user daily transfer tx relate to `token`
+  _transferCount: Int # count user daily transfer tx relate to `token`
   items: [UserDailyReport] @derivedFrom(field: "group")
   timestamp: Date!
 }
@@ -39,12 +39,12 @@ type UserDailyReport @entity {
   group: UserDailyReportGroup
   account: Account!
   token: Token!
-  transferCount: Int! # count user daily transfer
-  _transferCount: Int! # count all daily transfer
-  abs: BigInt! # transfer amount abs
-  in: BigInt! # transfer in amount
-  out: BigInt! # transfer out amount
-  volume: BigInt! # total transfer volume
+  transferCount: Int # count user daily transfer
+  _transferCount: Int # count all daily transfer
+  abs: BigInt # transfer amount abs
+  in: BigInt # transfer in amount
+  out: BigInt # transfer out amount
+  volume: BigInt # total transfer volume
   timestamp: Date!
 }
 
