@@ -12,7 +12,7 @@
     "lint": "npx eslint . --ext .ts",
     "prettier": "npx prettier --write ."
   },
-  "homepage": "https://github.com/Hayden0323/tutorials-moonriver-evm-starter",
+  "homepage": "https://github.com/subquery/tutorials-moonriver-evm-starter",
   "repository": "github:subquery/tutorials-moonriver-evm-starter",
   "files": [
     "dist",
@@ -37,8 +37,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "dayjs": "^1.10.7",
     "ethers": "^5.5.0",
-    "jest": "^27.3.1",
-    "prettier": "^2.4.1",
-    "ts-jest": "^27.0.7"
+    "prettier": "^2.4.1"
   }
 }
