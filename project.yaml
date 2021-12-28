@@ -1,12 +1,12 @@
-specVersion: "0.2.0"
+specVersion: '0.2.0'
 
-name: "Moonriver EVM Starter Project"
-version: "1.0.0"
-description: "A basic Moonriver EVM example project with an event and call handler. Read more about this at https://doc.subquery.network/create/moonbeam/"
-repository: "https://github.com/subquery/tutorials-moonriver-evm-starter"
+name: 'Moonriver EVM Starter Project'
+version: '1.0.0'
+description: 'A basic Moonriver EVM example project with an event and call handler. Read more about this at https://doc.subquery.network/create/moonbeam/'
+repository: 'https://github.com/subquery/tutorials-moonriver-evm-starter'
 
 schema:
-  file: "./schema.graphql"
+  file: './schema.graphql'
 
 network:
   genesisHash: '0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b' # Genesis hash of Moonriver
@@ -15,7 +15,7 @@ network:
   dictionary: 'https://api.subquery.network/sq/subquery/moonriver-dictionary'
 
   chaintypes:
-    file: "./types.yaml"
+    file: './types.yaml'
 
 dataSources:
   - kind: substrate/Moonbeam
@@ -56,16 +56,3 @@ dataSources:
               - null
               - null
               - null
-        - handler: handleMoonriverCall
-          kind: substrate/MoonbeamCall
-          filter:
-            ## The function can either be the method fragment or signature
-            # function: '0x095ea7b3'
-            # function: '0x7ff36ab500000000000000000000000000000000000000000000000000000000'
-            # function: approve(address,uint256)
-            function: approve(address to,uint256 value)
-
-            ## The transaction sender
-            # from: '0x6bd193ee6d2104f14f94e2ca6efefae561a4334b'
-
-

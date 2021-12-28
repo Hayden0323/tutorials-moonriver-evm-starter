@@ -8,16 +8,18 @@
     "prepack": "rm -rf dist && yarn build",
     "test": "jest",
     "codegen": "./node_modules/.bin/subql codegen",
-    "docker": "docker-compose pull && docker-compose up"
+    "docker": "docker-compose pull && docker-compose up",
+    "lint": "npx eslint . --ext .ts",
+    "prettier": "npx prettier --write ."
   },
-  "homepage": "https://github.com/subquery/tutorials-moonriver-evm-starter",
+  "homepage": "https://github.com/Hayden0323/tutorials-moonriver-evm-starter",
   "repository": "github:subquery/tutorials-moonriver-evm-starter",
   "files": [
     "dist",
     "schema.graphql",
     "project.yaml"
   ],
-  "author": "Ian He & Jay Ji",
+  "author": "Hayden0323",
   "license": "Apache-2.0",
   "devDependencies": {
     "@polkadot/api": "^6.6.1",
@@ -27,6 +29,16 @@
   "dependencies": {
     "@subql/contract-processors": "^0.3.0",
     "@subql/types": "latest",
-    "ethers": "^5.5.0"
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "dayjs": "^1.10.7",
+    "ethers": "^5.5.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7"
   }
 }
