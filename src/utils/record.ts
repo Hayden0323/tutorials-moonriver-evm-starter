@@ -1,81 +1,81 @@
-// import { Account, Token, TokenDailyReport, Transfer, UserDailyReport, UserDailyReportGroup } from '../types'
+import { Account, Token, TokenDailyReport, Transfer, UserDailyReport, UserDailyReportGroup } from '../types'
 
-// export async function getAccount(id: string) {
-//   let record = await Account.get(id)
+export async function getAccount(id: string) {
+  let record = await Account.get(id)
 
-//   if (!record) {
-//     record = new Account(id)
+  if (!record) {
+    record = new Account(id)
 
-//     record.transferCount = 0
-//     record._transferCount = 0
-//   }
+    record.transferCount = 0
+    record._transferCount = 0
+  }
 
-//   return record
-// }
+  return record
+}
 
-// export async function getToken(id: string) {
-//   let record = await Token.get(id)
+export async function getToken(id: string) {
+  let record = await Token.get(id)
 
-//   if (!record) {
-//     record = new Token(id)
+  if (!record) {
+    record = new Token(id)
 
-//     record.transferCount = 0
-//     record._transferCount = 0
-//   }
+    record.transferCount = 0
+    record._transferCount = 0
+  }
 
-//   return record
-// }
+  return record
+}
 
-// export async function getTransfer(id: string) {
-//   let record = await Transfer.get(id)
+export async function getTransfer(id: string) {
+  let record = await Transfer.get(id)
 
-//   if (!record) {
-//     record = new Transfer(id)
-//   }
+  if (!record) {
+    record = new Transfer(id)
+  }
 
-//   return record
-// }
+  return record
+}
 
-// export async function getUserDailyReportGroup(id: string) {
-//   let record = await UserDailyReportGroup.get(id)
+export async function getUserDailyReportGroup(id: string) {
+  let record = await UserDailyReportGroup.get(id)
 
-//   if (!record) {
-//     record = new UserDailyReportGroup(id)
+  if (!record) {
+    record = new UserDailyReportGroup(id)
 
-//     record.transferCount = 0
-//     record._transferCount = 0
-//   }
+    record.transferCount = 0
+    record._transferCount = 0
+  }
 
-//   return record
-// }
+  return record
+}
 
-// export async function getUserDailyReport(id: string) {
-//   let record = await UserDailyReport.get(id)
+export async function getUserDailyReport(id: string) {
+  let record = await UserDailyReport.get(id)
 
-//   if (!record) {
-//     record = new UserDailyReport(id)
+  if (!record) {
+    record = new UserDailyReport(id)
 
-//     record.transferCount = 0
-//     record._transferCount = 0
-//     record.abs = BigInt(0)
-//     record.in = BigInt(0)
-//     record.out = BigInt(0)
-//     record.volume = BigInt(0)
-//   }
+    record.transferCount = 0
+    record._transferCount = 0
+    record.abs = BigInt(0)
+    record.in = BigInt(0)
+    record.out = BigInt(0)
+    record.volume = BigInt(0)
+  }
 
-//   return record
-// }
+  return record
+}
 
-// export async function getTokenDailyReport(id: string) {
-//   let record = await TokenDailyReport.get(id)
+export async function getTokenDailyReport(id: string) {
+  let record = await TokenDailyReport.get(id)
 
-//   if (!record) {
-//     record = new TokenDailyReport(id)
+  if (!record) {
+    record = new TokenDailyReport(id)
 
-//     record.transferCount = 0
-//     record._transferCount = 0
-//     record.volume = BigInt(0)
-//   }
+    record.transferCount = 0
+    record._transferCount = 0
+    record.volume = BigInt(0)
+  }
 
-//   return record
-// }
+  return record
+}
