@@ -9,7 +9,7 @@ export type ApproveCallArgs = [string, BigNumber] & { _spender: string; _value: 
 
 export async function createTransfer(from: string, to: string, tokenAddress: string, amount: bigint, event: MoonbeamEvent<TransferEventArgs>) {
   const txHash = event.transactionHash
-  const idx = event.transactionIndex
+  const idx = event.logIndex
   const block = event.blockNumber
   const timestamp = event.blockTimestamp
   const fromAccount = await getAccount(from)
@@ -18,6 +18,8 @@ export async function createTransfer(from: string, to: string, tokenAddress: str
   const transfer = await getTransfer(`${txHash}-${idx}`)
 
   const dateEndOfDay = getDateEndOfDay(timestamp).toDate()
+
+  logger.info([txHash, idx, tokenAddress, from, to, amount.toString(), block, timestamp.getTime()].join('-'))
 
   transfer.fromId = fromAccount.id
   transfer.toId = toAccount.id
