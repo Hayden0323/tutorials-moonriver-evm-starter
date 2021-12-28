@@ -13,8 +13,8 @@ export async function handleMoonriverEvent(event: MoonbeamEvent<TransferEventArg
     transaction.from = event.args.from;
     transaction.to = event.args.to;
     transaction.contractAddress = event.address;
-
-    console.log(event.args.from)
+    
+    logger.info(event.args.from);
 
     await transaction.save();
 }
