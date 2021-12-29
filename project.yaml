@@ -25,6 +25,7 @@ dataSources:
       options:
         # Must be a key of assets
         abi: erc20
+        address: 'null'
     assets:
       erc20:
         file: './erc20.abi.json'
@@ -50,8 +51,4 @@ dataSources:
               #   - 'Approval(address indexed owner, address indexed spender, uint256 value)'
 
               - Transfer(address indexed from,address indexed to,uint256 value)
-              ## topics[1] to topics[3] are the indexed values
-              - null
-              - null
-              - null
 
