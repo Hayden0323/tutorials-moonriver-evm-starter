@@ -25,6 +25,8 @@ dataSources:
       options:
         # Must be a key of assets
         abi: erc20
+        ## The contract that emitted the event
+        address: 'null'
     assets:
       erc20:
         file: './erc20.abi.json'
