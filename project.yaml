@@ -22,6 +22,11 @@ dataSources:
     startBlock: 752073
     processor:
       file: './node_modules/@subql/contract-processors/dist/moonbeam.js'
+      options:
+        # Must be a key of assets
+        abi: erc20
+        # Contract address (or recipient if transfer) to filter, if `null` should be for contract creation
+        address: null
     assets:
       erc20:
         file: './erc20.abi.json'

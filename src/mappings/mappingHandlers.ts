@@ -11,13 +11,13 @@ export async function handleMoonriverEvent(event: MoonbeamEvent<TransferEventArg
   //   transaction.contractAddress = event.address;
 
   //   await transaction.save();
+
+  if (!event.args) return
     
   const from = event.args.from
   const to = event.args.to
   const amount = event.args.value.toBigInt()
   const tokenAddress = event.address
-
-  // logger.info(event.address)
 
   await createTransfer(from, to, tokenAddress, amount, event)
 }
